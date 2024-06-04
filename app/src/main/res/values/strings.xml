@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CGPA Calculator</string>
+    <string name="arid_cgpa_calculator">Arid CGPA Calculator</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result:</string>
+    <string name="credit_hours">Credit Hours</string>
+    <string name="enter_credit_hours">Enter Credit Hours</string>
+    <string name="cgpa">CGPA:</string>
+</resources>

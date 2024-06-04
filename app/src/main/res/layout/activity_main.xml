@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/chrss1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Credit Hours"
+            android:textColorHint="#474545"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextFields"
+            android:inputType="number"/>
+
+
+        <EditText
+            android:id="@+id/mrkss1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Marks"
+            android:textColorHint="#474545"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextFields"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/chrss2"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="@string/enter_credit_hours"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/mrkss2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Marks"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/chrss3"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Credit Hours"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/mrkss3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Marks"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/chrss4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Credit Hours"
+            android:textColorHint="#474545"
+            tools:ignore="HardcodedText,TextFields"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/mrkss4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Marks"
+            android:textColorHint="#474545"
+            tools:ignore="HardcodedText,TextFields"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/chrss5"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Credit Hours"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/mrkss5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Marks"
+            android:textColorHint="#474545"
+            tools:ignore="HardcodedText,TextFields"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prvscgpa"
+            android:layout_margin="5dp"
+            android:autofillHints="0"
+            android:hint="Enter Previous CGPA(Optional)"
+            tools:ignore="HardcodedText,TextFields"
+            android:textColorHint="#474545"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalc"
+            android:text="@string/calculate"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textColor="#474545"
+            android:id="@+id/result"/>
+    </LinearLayout>
+
+
+</LinearLayout>
