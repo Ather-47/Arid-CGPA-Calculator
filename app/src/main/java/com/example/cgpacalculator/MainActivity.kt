@@ -12,6 +12,7 @@ import kotlin.math.floor
 class MainActivity : AppCompatActivity(){
 
     private lateinit var calcBtn :Button
+    private lateinit var resetBtn : Button
 
     private lateinit var crss1 : EditText
     private lateinit var crss2 : EditText
@@ -117,7 +118,7 @@ class MainActivity : AppCompatActivity(){
         {
             return 0
         }
-        else if(credits == 0)
+        else if(credits == 0 || credits > 4)
         {
             return 0
         }
@@ -132,6 +133,7 @@ class MainActivity : AppCompatActivity(){
         setSupportActionBar(toolbar)
 
         calcBtn = findViewById(R.id.btnCalc)
+        resetBtn = findViewById(R.id.btnReset)
 
         crss1 = findViewById(R.id.chrss1)
         crss2 = findViewById(R.id.chrss2)
@@ -148,7 +150,6 @@ class MainActivity : AppCompatActivity(){
         prvscgpa = findViewById(R.id.prvscgpa)
 
         resulTv = findViewById(R.id.result)
-
 
         calcBtn.setOnClickListener()
         {
@@ -197,12 +198,36 @@ class MainActivity : AppCompatActivity(){
             {
                 qualityPoints += output[j]
             }
-            val gpa = qualityPoints / credits
-            if(prv == 0.0) {prv = gpa}
-            val cgpa = floor(((gpa + prv) / 2.0) * 100.0) / 100.0
-            println(credits)
-            resulTv.text = "CGPA: $cgpa"
+            var gpa = 0.0
+            gpa = if(credits == 0){
+                0.0
+            } else{
+                qualityPoints / credits
+            }
+            if(prv == 0.0)
+            {
+                prv = gpa
+            } else if(gpa == 0.0){
+                gpa = prv
+            }
+            val cgpa = floor((( gpa+ prv) / 2.0) * 100.0) / 100.0
+            resulTv.text = "GPA: $gpa\t\t\tCGPA: $cgpa"
 
+        }
+
+        resetBtn.setOnClickListener()
+        {
+            crss1.text.clear()
+            crss2.text.clear()
+            crss3.text.clear()
+            crss4.text.clear()
+            crss5.text.clear()
+            mrkss1.text.clear()
+            mrkss2.text.clear()
+            mrkss3.text.clear()
+            mrkss4.text.clear()
+            mrkss5.text.clear()
+            prvscgpa.text.clear()
         }
     }
 
