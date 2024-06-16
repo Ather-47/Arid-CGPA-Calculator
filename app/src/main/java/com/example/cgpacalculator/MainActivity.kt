@@ -202,7 +202,7 @@ class MainActivity : AppCompatActivity(){
             gpa = if(credits == 0){
                 0.0
             } else{
-                qualityPoints / credits
+                floor((qualityPoints / credits) * 100.0) / 100.0
             }
             if(prv == 0.0)
             {
@@ -210,7 +210,7 @@ class MainActivity : AppCompatActivity(){
             } else if(gpa == 0.0){
                 gpa = prv
             }
-            val cgpa = floor((( gpa+ prv) / 2.0) * 100.0) / 100.0
+            val cgpa =   floor(((gpa + prv) / 2.0) * 100.0) / 100.0
             resulTv.text = "GPA: $gpa\t\t\tCGPA: $cgpa"
 
         }
